@@ -17,9 +17,9 @@ const CategoryPage = ({ params: { category } }) => {
     const categoryName = capitalizeFirstLetter(category);
 
     return (
-        <div className="max-w-md mx-auto mt-4">
+        <div className="max-w-md mx-auto my-4">
             <h2 className="text-2xl font-bold mb-4">{categoryName} Pokemons</h2>
-            <h3 className="text-xl font-semibold mt-8 mb-2">Pokemons in {categoryName} category:</h3>
+            <h3 className="text-xl font-semibold mt-8 mb-2">Pokemons in this category:</h3>
             <ul className="grid grid-cols-2 gap-4">
                 {pokemonData.map(p => {
                     const { pokemon } = p;

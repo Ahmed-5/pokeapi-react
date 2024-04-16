@@ -22,7 +22,7 @@ const PokemonPage = ({ params: { pokemon } }) => {
     const pokemonName = capitalizeFirstLetter(pokemon);
 
     return (
-        <div className="w-10/12 mx-auto mt-4">
+        <div className="w-10/12 mx-auto my-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                     <div className='flex justify-center'>

@@ -28,7 +28,7 @@ const CategoryPage = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-4">
+    <div className="max-w-md mx-auto my-4">
       <h2 className="text-2xl font-bold mb-4">Pokemon Categories</h2>
       <form onSubmit={handleSearch} className="mb-4">
         <div className="flex items-center">
