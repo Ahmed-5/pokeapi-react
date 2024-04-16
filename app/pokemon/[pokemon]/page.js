@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import HexChart from '@/components/HexChart';
 import { usePokemonDetail } from '@/hooks/usePokemon';
@@ -45,7 +44,7 @@ const PokemonPage = ({ params: { pokemon } }) => {
                         <h2 className="text-xl mt-6 mb-2 font-medium text-center">Types</h2>
                         <div className="flex gap-1 justify-center">
                             {
-                                pokemonData.types.map(({ type }, index) =>
+                                pokemonData.types.map(({ type }) =>
                                     type.name == "ghost" | type.name == "poison" | type.name == "dark" | type.name == "water" | type.name == "rock"
                                         ?
                                         <p style={{ backgroundColor: colors[type.name.toString()], }} key={type.slot} className="rounded-md w-24 text-center text-white">{type.name[0].toUpperCase() + type.name.slice(1)}</p>
@@ -57,7 +56,7 @@ const PokemonPage = ({ params: { pokemon } }) => {
 
                     <div className="px-4">
                         <h2 className="text-xl mt-6 mb-2 font-medium text-center">Abilities</h2>
-                        {pokemonData.abilities.map(({ ability }, index) => <p key={ability.slot} className="text-center">{"- " + ability.name[0].toUpperCase() + ability.name.slice(1)}</p>)}
+                        {pokemonData.abilities.map(({ ability }) => <p key={ability.slot} className="text-center">{"- " + ability.name[0].toUpperCase() + ability.name.slice(1)}</p>)}
                     </div>
                 </div>
 
